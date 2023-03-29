@@ -50,6 +50,7 @@
                 <compilerarg value="-Xlint:unchecked" />
                 <!--<compilerarg value="-Xlint:deprecation" />-->
                 <compileoptions/>
+                <compilerarg line="-encoding UTF-8 "/>  <!--这个才行-->
             </javac>
         </sequential>
     </macrodef>
@@ -182,6 +183,8 @@
         </fileset>
     </copy>
     </target>
+
+
 
     <target name="javadocs" description="Build javadoc documentation">
         <javadoc destdir="${doc}" access="private" failonerror="true" source="${sourceversion}" additionalparam="-Xdoclint:none">
